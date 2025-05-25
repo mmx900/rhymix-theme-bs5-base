@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin version="0.2">
+    <title xml:lang="ko">Bootstrap 5 로그인 위젯</title>
+    <title xml:lang="en">Bootstrap 5 login widget</title>
+    <version>0.1</version>
+    <date>2013-11-27</date>
+    <author email_address="mmx900@gmail.com" link="http://xpressengine.com/">
+        <name xml:lang="ko">mmx900</name>
+        <name xml:lang="en">mmx900</name>
+    </author>
+</skin>

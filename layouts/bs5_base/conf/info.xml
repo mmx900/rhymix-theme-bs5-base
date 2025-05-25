@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.2">
-    <title xml:lang="ko">기본 레이아웃-blade</title>
-    <title xml:lang="en">Default Layout</title>
+    <title xml:lang="ko">Bootstrap 5 기본 레이아웃</title>
+    <title xml:lang="en">Bootstrap 5 Default Layout</title>
     <description xml:lang="ko">사이트 기본 레이아웃.</description>
     <description xml:lang="en">Site default layout.</description>
-    <version>1.7</version>
+    <version>0.1</version>
     <date>2013-11-27</date>
-    <author email_address="developer@xpressengine.com" link="http://xpressengine.com/">
-        <name xml:lang="ko">NAVER</name>
-        <name xml:lang="en">NAVER</name>
+    <author email_address="mmx900@gmail.com" link="http://xpressengine.com/">
+        <name xml:lang="ko">mmx900</name>
+        <name xml:lang="en">mmx900</name>
     </author>
     <menus>
         <menu name="GNB" maxdepth="2" default="true">

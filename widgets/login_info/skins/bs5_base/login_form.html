@@ -1,0 +1,40 @@
+<load target="default.login.css" />
+<load target="login.xml" />
+<load target="default.login.js" />
+
+<form id="fo_login_widget" action="{getUrl('','act','procMemberLogin')}" method="post" ruleset="@login" class="account">
+	<div class="text-end"> <a href="#acField" class="btn btn-outline-primary">{$lang->cmd_login}</a> </div>
+	<fieldset id="acField">
+		<h1 class="h3 mb-3 fw-normal">{$lang->cmd_login}</h1>
+		<input type="hidden" name="act" value="procMemberLogin" />
+		<input type="hidden" name="success_return_url" value="{htmlspecialchars(getRequestUriByServerEnviroment(), ENT_COMPAT | ENT_HTML401, 'UTF-8', false)}" />
+		<input type="hidden" name="xe_validator_id" value="widgets/login_info/skins/default/login_form/1" />
+		<div cond="$XE_VALIDATOR_MESSAGE && $XE_VALIDATOR_ID == 'widgets/login_info/skins/default/login_form/1'" class="message {$XE_VALIDATOR_MESSAGE_TYPE}">
+			<p>{$XE_VALIDATOR_MESSAGE}</p>
+		</div>
+		<div class="form-floating" cond="$member_config->identifier != 'email_address'">
+			<input type="text" class="form-control" name="user_id" id="user_id" required>
+			<label for="user_id">{$lang->user_id}</label>
+		</div>
+		<div class="form-floating" cond="$member_config->identifier == 'email_address'">
+			<input type="email" class="form-control" name="user_id" id="user_id" required>
+			<label for="user_id">{$lang->email_address}</label>
+		</div>
+		<div class="form-floating">
+			<input type="password" class="form-control" name="password" id="user_pw" placeholder="Password" required>
+			<label for="user_pw">{$lang->password}</label>
+		</div>
+		<div class="form-check text-start my-3">
+			<input class="form-check-input" type="checkbox" name="keep_signed" id="keep_signed" value="Y">
+			<label class="form-check-label" for="keep_signed">
+				{$lang->keep_signed}
+			</label>
+		</div>
+		<p class="warning">{$lang->about_keep_warning}</p>
+		<button class="btn btn-primary w-100 py-2" type="submit">{$lang->cmd_login}</button>
+		<ul class="help">
+			<li><a href="{getUrl('act','dispMemberSignUpForm')}">{$lang->cmd_signup}</a></li>
+			<li><a href="{getUrl('act','dispMemberFindAccount')}">{$lang->cmd_find_member_account}</a></li>
+		</ul>
+	</fieldset>
+</form>
